@@ -1,0 +1,29 @@
+{% extends 'pages/base.html' %}
+{% block title %}История{% endblock %}
+
+{% block content %}
+
+{% for history in histories %}
+<article class="article">
+  <div id="content_box">
+    <div class="post excerpt ">
+      <header>
+        <h2 class="title">
+          <a href="" rel="bookmark">{{ entry.title }}</a>
+        </h2>
+      </header><!--.header-->
+      <div class="post-content image-caption-format-1">
+        <a href="#" rel="nofollow" id="featured-thumbnail">
+        <div class="featured-thumbnail"><img src="/media/{{ history.image_one }}" class="attachment-featured wp-post-image" height="250" width="350"></div></a>
+        <p>{{ history.text }}</p>
+      </div>
+    </div><!--.post excerpt-->
+  </div>
+</article>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

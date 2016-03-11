@@ -1,0 +1,204 @@
+{% load staticfiles %}
+{% load news_tags %}
+{% load slider_tags %}
+{% load links_tags %}
+
+<!DOCTYPE html>
+<html crossriderapp2258="true" class=" js flexbox no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+
+	<title>{% block title %}"СРЦН "Феникс"{% endblock %}</title>
+
+	<!--iOS/android/handheld specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" type="text/css" media="all" href="{% static 'pages' %}/style.css">
+	<link rel="stylesheet" type="text/css" media="all" href="{% static 'pages' %}/prettyPhoto.css">
+
+			<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="{% static 'pages' %}/js/modernizr.min.js"></script>
+	<script src="{% static 'pages' %}/js/customscript.js" type="text/javascript"></script>
+	    <script type="text/javascript" src="{% static 'pages' %}/js/jssor.slider.min.js"></script>
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <script src="{% static 'pages' %}/js/slider.js"></script>
+		<script src="{% static 'pages' %}/js/jquery-1.6.1.min.js"></script>
+		<script src="{% static 'pages' %}/js/jquery.prettyPhoto.js"></script>
+
+
+
+
+	</head>
+
+	<body>
+
+		<header class="main-header">
+			<div class="container">
+				<div id="header">
+
+						<h2>БУ СО Вологодской области "Социально - реабилитационный центр для несовершеннолетних "Феникс"</h2>
+						<div class="widget-area widget-header">
+						<ul><div class="textwidget"><img src="{% static 'pages' %}/images/103642-1335226181.png"></div></ul>
+						<ul><div class="textwidget-left"><img src="{% static 'pages' %}/images/103642-1335226182.png"></div></ul>
+						<ul><div class="textwidget-centr"><img src="{% static 'pages' %}/images/103642-1335226183.png"></div></ul>
+
+					</div>
+				</div>
+
+				</div><!--#header-->
+			</div><!--.container-->
+		</header>
+
+		<div class="container">
+			<div class="secondary-navigation">
+				<nav id="navigation">
+					<ul class="menu"><li class="menu-item"><a href="/">Главная</a></li>
+						<li class="menu-item"><a href="">Об учреждении</a>
+							<ul class="submenu">
+					            <li><a href=#>Структура</a></li>
+					            <li><a href='/about/history_page/'>История</a></li>
+											<li><a href=#>Попечительский совет</a></li>
+					        </ul>
+						</li>
+						<li class="menu-item"><a href="#">Документация</a>
+							<ul class="submenu">
+								 <li><a href="/documents/constituent_documents/">Учредительные документы</a></li>
+					            <li><a href=#>Противодействие коррупции</a></li>
+					        </ul>
+						</li>
+						<li class="menu-item"><a href="#">Контакты</a></li>
+						<li class="menu-item"><a href="">Галерея</a>
+							<ul class="submenu">
+					            <li><a href="/gallery/">Фото</a></li>
+					            <li><a href='/about/history_page/'>Видео</a></li>
+					    </ul>
+						</li>
+						<li class="menu-item"><a href="#">Вакансии</a></li>
+						<li class="menu-item"><a href="#">Методическая площадка</a></li>
+					</ul>
+				<select><option value="" selected="selected">Go to...</option><option value="#">Home</option><option value="#">About</option><option value="#">Contact Us</option><option value="#">Awesomeness</option><option value="#">featured</option><option value="#">Brochure</option><option value="#">Design</option><option value="#">Inspiration</option></select></nav>
+			</div>
+		</div>
+
+		<div id="page">
+	<div class="content">
+		{% block content %}
+		<article class="article">
+			<div id="content_box">
+        {% news_title news %}
+				<div class="pnavigation2">
+					<div class="nav-previous left"><a href="#"><span class="meta-nav">←</span> Older posts</a></div>
+					<div class="nav-next right"></div>
+				</div>
+			</div>
+		</article>
+		{% endblock %}
+
+		<aside class="sidebar c-4-12">
+		  <div id="sidebars" class="g">
+		    <div class="sidebar">
+		      <ul class="sidebar_list">
+		        <li class="widget widget-sidebar">
+		          <h3>Наши контакты</h3>
+		          <p>160025, г. Вологда, Московское шоссе д. 40
+		            Тел. 8(8172)74-40-95
+		          </p>
+		        </li>
+		        <li class="widget widget-sidebar">
+		          <div class="ad-300">
+		          <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 300px; height: 250px; overflow: hidden; visibility: hidden;">
+		                <!-- Loading Screen -->
+		                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+		                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+		                    <div style="position:absolute;display:block; no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+		                </div>
+		                <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 300px; height: 250px; overflow: hidden;">
+		                      {% sidebar_slider sidebar %}
+		                </div>
+		                <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+		            </div>
+		            <script>
+		                jssor_1_slider_init();
+		            </script>
+		        </div>
+		      </li>
+		        <li class="widget widget-sidebar"><h3>Полезные ссылки</h3>
+						<div class="ad-125">
+										<ul>
+
+											{% sidebar_links sidebar %}
+
+										</ul>
+						</div>
+						</li>
+		        <li class="widget widget-sidebar">		<h3>Recent Posts</h3>		<ul>
+		          {% for slider in sliders %}
+		            <li><a href="#">{{ slider.title }}</a></li>
+		            {% endfor %}
+		            </ul>
+		        </li>
+		        <li class="widget widget-sidebar">
+		          <div class="mts-subscribe">
+
+		            <form style="" action="#" method="post" target="popupwindow" _lpchecked="1">
+		            <input value="Your email Address..." type="text">
+		            <input value="mythemeshop" name="uri" type="hidden"><input name="loc" value="en_US" type="hidden"><input value="Subscribe" type="submit">
+		            </form>
+
+		            <div class="result"></div>
+
+		          </div><!--subscribe_widget-->
+
+		        </li>
+		      </ul>
+		    </div>
+		  </div><!--sidebars-->
+		</aside>
+
+
+	</div><!--#page-->
+</div><!--.container-->
+	<footer>
+		<div class="container">
+			<div class="footer-widgets">
+				<div class="f-widget">
+					<div class="widget"><h3>Lorem ipsum</h3>
+						<div class="textwidget">Lorem
+						 ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam
+						augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis
+						orci. Duis libero orci, pretium a.</div>
+					</div>
+				</div>
+				<div class="f-widget">
+					<div class="widget"><h3>Consectetuer adipiscing</h3>			<div class="textwidget">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Curabitur</a> quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a.</div>
+					</div>
+				</div>
+				<div class="f-widget last">
+					<div class="widget">		<h3>Recent Posts</h3>		<ul>
+						<li><a href="#">Porttitor Lectus Tincidunt Elementum Nascetur Montes</a></li>
+						<li><a href="#">Mauris Dictum Libero Id Justo Fusce In Est</a></li>
+						<li><a href="#">Cum Sociis Natoque Penatibus Magnis</a></li>
+						<li><a href="#">Aliquet Pid Massa Porttitor Dictumst Ac Aenean A Dolor?</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="copyrights">
+					<div class="row" id="copyright-note">
+					<span>© 2016</span> - <span>Все права защищены. При использовании материалов с сайта ссылка на источник обязательна.</span>
+					</div>
+					<div class="top"><a href="#">Наверх ↑</a></div>
+				</div>
+			</div><!--.footer-widgets-->
+		</div><!--.container-->
+	</footer><!--footer-->
+	<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+</script>
+</body></html>

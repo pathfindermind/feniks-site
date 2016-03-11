@@ -1,0 +1,22 @@
+{% extends 'pages/base.html' %}
+{% load staticfiles %}
+{% block title %}Учредительные документы{% endblock %}
+
+{% block content %}
+
+<article class="article">
+  <div id="content_box">
+
+<div class="post excerpt ">
+  {% for c_document in c_documents %}
+  <div class="post-content image-caption-format-1">
+    <img src="{% static 'pages' %}/img/file.png" alt="" height="30" width="30" align = "left"><ul><a href="{{ c_document.doc.url }}" rel="nofollow" class="doc-link" id="featured-thumbnail">{{ c_document.title }}
+  </a></ul><br>
+  </div>
+  {% endfor %}
+</div>
+
+</div>
+</article>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% for entry in entries %}
+<div class="post excerpt ">
+  <header>
+    <h2 class="title">
+      <a href="{{ entry.get_absolute_url }}" rel="bookmark">{{ entry.title }}</a>
+    </h2>
+    <div class="post-info">
+      <time>{{ entry.published_at|date:"Y/M/d" }}</time>
+    </div>
+  </header><!--.header-->
+  <div class="post-content image-caption-format-1">
+    <a href="#" rel="nofollow" id="featured-thumbnail">
+
+    <div class="featured-thumbnail"><img src="/media/{{ entry.image }}" class="attachment-featured wp-post-image" height="150" width="150"></div>															</a>
+    <p>{{ entry.tease }}</p>
+    <p class="more"><a href="{{ entry.get_absolute_url }}">Далее…</a></p>
+  </div>
+</div><!--.post excerpt-->
+{% endfor %}

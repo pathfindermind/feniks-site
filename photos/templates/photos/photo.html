@@ -1,0 +1,34 @@
+{% extends 'pages/base.html' %}
+{% load staticfiles %}
+{% load thumbnail %}
+{% block title %}Фото{% endblock %}
+
+{% block content %}
+<article class="gallery">
+  <div id="content_box-photos">
+
+    <ul class="photos-1">
+        <h3>Фотогалерея</h3>
+
+						<li class="widget widget-sidebar">
+              <div class="ad-125-photos">
+                <ul>
+                  {% for photo in photos.photo_set.all %}
+                  <li class="oddad">
+                    <a href="/media/{{ photo.img }}" rel="prettyPhoto[pp_gal]">
+                    {% thumbnail photo.img "150x150" crop='center' as im %}
+                    <img src="{{ im.url }}" alt="{{ photo.title }}" width="{{ im.width }}" height="{{ im.height }}">
+                    {% endthumbnail %}
+                  </a>
+                  <p>{{ photo.title }}</p>
+                </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+
+
+					</ul>
+  </div>
+</article>
+{% endblock %}

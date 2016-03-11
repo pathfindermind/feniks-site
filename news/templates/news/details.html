@@ -1,0 +1,29 @@
+{% extends 'pages/base.html' %}
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<article class="article">
+  <div id="content_box">
+    <div class="post excerpt ">
+      <header>
+        <h2 class="title">
+          <a href="" rel="bookmark">{{ entry.title }}</a>
+        </h2>
+        <div class="post-info">
+          <time>{{ entry.published_at|date:"Y/M/d" }}</time>
+        </div>
+      </header><!--.header-->
+      <div class="post-content image-caption-format-1">
+
+        <div class="featured-thumbnail" id="detail-pic"><img src="/media/{{ entry.image }}" class="attachment-featured wp-post-image" height="450" width="850"></div>
+        <div class="detail-text">
+        <p align="justify">{{ entry.body }}</p>
+        </div>
+      </div>
+    </div><!--.post excerpt-->
+  </div>
+</article>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
