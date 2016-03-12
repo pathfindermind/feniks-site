@@ -9,3 +9,4 @@ fabfile.py
 .idea/
 searchindex/
 /static/
+/media/
