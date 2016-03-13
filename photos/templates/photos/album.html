@@ -10,10 +10,10 @@
 
     <ul class="photos-1">
         <h3>Фотогалерея</h3>
-        {% for album in my_album %}
 						<li class="widget widget-sidebar">
               <div class="ad-125-photos">
                 <ul>
+                  {% for album in my_album %}
                   <li class="oddad"><a href="{{ album.slug }}">
                     {% thumbnail album.img "200x200" crop='center' as im %}
                     <img src="{{ im.url }}" alt="{{ im.title }}" width="{{ im.width }}" height="{{ im.height }}">
@@ -21,11 +21,10 @@
                   </a>
                   <p>{{ album.title }}</p>
                 </li>
+                  {% endfor %}
                 </ul>
               </div>
             </li>
-            {% endfor %}
-
 					</ul>
   </div>
 </article>
