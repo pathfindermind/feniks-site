@@ -255,6 +255,8 @@ margin: 0;
 line-height: 48px;
 text-transform: uppercase;
 margin-top: 20px;
+color:#fff;
+text-shadow: none;
 }
 #logo a {
 color: #777;
@@ -337,7 +339,7 @@ font-size:12px;
 background: #fff;
 text-shadow:0 1px 0 rgba(0, 0, 0, 0.1);
 color: #000;
-border: 3px solid #ddd;
+
 }
 #navigation ul ul li{
 padding:0;
@@ -397,10 +399,17 @@ left:-12px;
 top:3px;
 }
 /*-[ Content ]--------------------*/
+
 .article{
 width: 66.5%;
 float: left;
 margin-bottom: 20px;
+background: #fff;
+margin-top: 30px
+}
+
+
+
 }
 .post-content {
 overflow: hidden;
@@ -415,7 +424,9 @@ clear: both;
 margin-bottom: 30px;
 overflow: hidden;
 border-bottom: 1px solid #eee;
-margin-top: 40px;
+margin-top: 10px;
+background: #fff;
+margin-left: 10px;
 }
 .wp-post-image {
 float: left;
@@ -908,6 +919,7 @@ list-style: none!important;
 padding-left: 0;
 background: none;
 margin-bottom: 15px;
+margin-left: 15px;
 }
 .ad-125 img {
 padding: 0.4em;
@@ -1281,22 +1293,19 @@ ul.submenu {
     display: none;
     position: absolute;
     padding: 0px 0 0px 0 !important;
-    width: 420px;
+    width: 320px;
     top: 43px;
     left: 0px !important;
-    background-image: url(images/hbg.gif) !important;
+    background-image: url(images/menubg.png) !important;
 
 }
 ul.submenu > li {
     display: block;
+    margin-left: -10px;
 }
 ul.submenu > li > a {
     display: block;
-    padding: 10px;
-    color: gray;
-    background-color: gray;
-    text-decoration: none;
-    background-image: url(images/hbg.gif);
+    background-image: url(images/menubg.png);
 }
 ul.submenu > li > a:hover {
     text-decoration: underline;
@@ -1314,12 +1323,9 @@ ul.menu > li:hover > ul.submenu {
 
 }
 
-.detail-text {
-  margin-top: 490px !important;
-}
 
 .detail-text p {
-    text-indent: 30px;
+    text-indent: 40px;
   }
 
   .doc-link {
@@ -1335,15 +1341,22 @@ ul.menu > li:hover > ul.submenu {
 
 
 .photos-1 {
-  margin-top: 100px;
+  margin-top: 70px;
+}
+
+.photos-1 h3 {
+  text-shadow: none;
+  color: #fff;
 }
 
   .ad-125-photos ul {
   float: left;
-  width: 650px;
+  width: 645px;
   margin: 0;
   list-style: none;
   max-width: 100%;
+  margin-top: 20px;
+  margin-left: 10px;
   }
   .ad-125-photos li{
   float: left;
@@ -1365,3 +1378,38 @@ ul.menu > li:hover > ul.submenu {
   margin-top: -50px;
   float: left;
   }
+
+
+  .menu {
+	background: #fff;
+	background-image: url(images/menubg.png);
+}
+
+.menu-item a {
+	margin-bottom: 8px;
+	margin-top: -5px;
+	margin-left: 10px;
+	color: #7af380;
+	text-shadow:none;
+
+}
+
+.widget {
+	background: #fff;
+	background-image: url(images/menubg.png);
+
+}
+
+.widget h3 {
+	text-shadow:none;
+	color: #fff;
+	margin-left: 10px;
+
+}
+
+.widget p {
+	text-shadow:none;
+	color: #fff;
+	margin-left: 10px;
+
+}
