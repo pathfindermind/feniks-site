@@ -43,7 +43,9 @@ INSTALLED_APPS = (
     'sidebar',
     'documents',
     'photos',
-    'sorl.thumbnail'
+    'sorl.thumbnail',
+    'feedback_app',
+    'captcha',
 )
 
 MIDDLEWARE_CLASSES = (
