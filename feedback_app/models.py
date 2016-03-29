@@ -26,7 +26,7 @@ class ContactForm(ModelForm):
             exclude = []
             widgets = {
             'text': Textarea(attrs={
-            'cols': 80, 'rows': 10, 'id': 'messagestyle','placeholder' : 'Текст'}),
+            'cols': 60, 'rows': 10, 'id': 'messagestyle','placeholder' : 'Текст'}),
             'name': TextInput(attrs={
             'id': 'namestyle', 'placeholder' : 'Имя'}),
             'title': TextInput(attrs={

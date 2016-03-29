@@ -126,11 +126,14 @@ margin:10px 0
 
 @font-face {
     font-family: 'BebasNeueRegular';
-    src: url('fonts/BebasNeue-webfont.otf');
-
-    font-weight: normal;
-    font-style: normal;
+    src: url('fonts/BebasNeuewebfont.eot');
+    src: url('fonts/BebasNeuewebfont.eot') format('embedded-opentype'),
+         url('fonts/BebasNeuewebfont.woff2') format('woff2'),
+         url('fonts/BebasNeuewebfont.woff') format('woff'),
+         url('fonts/BebasNeuewebfont.ttf') format('truetype'),
+         url('fonts/BebasNeuewebfont.svg#BebasNeuewebfont') format('svg');
 }
+
 
 /*-[ Framework ]--------------------*/
 body{
@@ -1412,4 +1415,12 @@ ul.menu > li:hover > ul.submenu {
 	color: #fff;
 	margin-left: 10px;
 
+}
+
+#contactform {
+  margin-top: 40px;
+  width: 650px;
+  float: left;
+  background: #fff;
+	background-image: url(images/menubg.png);
 }
