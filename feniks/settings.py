@@ -46,6 +46,8 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'feedback_app',
     'captcha',
+    'videos',
+    'oembed',
 )
 
 MIDDLEWARE_CLASSES = (

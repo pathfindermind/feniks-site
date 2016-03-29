@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^documents/', include('documents.urls')),
     url(r'^gallery/', include('photos.urls')),
     url(r'^contacts/', include('feedback_app.urls')),
+    url(r'^videos/', include('videos.urls')),
 ]
 
 

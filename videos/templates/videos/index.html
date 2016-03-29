@@ -1,0 +1,37 @@
+{% extends 'pages/base.html' %}
+
+{% load i18n %}
+
+{% block header %}
+    {{ block.super }}{% if tag %}: "{{ tag }}"{% endif %}
+{% endblock %}
+
+{% block content %}
+    {% for obj in object_list %}
+    <article class="entry-post">
+        <header class="entry-header">
+            <h3 class="entry-title">{{ obj }}</h3>
+            <div class="byline">
+                <i class="fa fa-clock-o"></i> {{ obj.created|date:'DATE_FORMAT' }} &nbsp;&nbsp;
+            </div>
+
+
+
+        </header>
+
+        <div class="entry-content">
+            <div class="video-wrapper">
+                <div class="fluid-width-video-wrapper" style="padding-top: 5%;">
+                    {{ obj.video_embed_code|safe }}
+                </div>
+            </div>
+            {{ obj.description|linebreaks }}
+        </div>
+
+        <footer class="entry-footer">
+        </footer>
+    </article>
+    {% endfor %}
+
+
+{% endblock %}

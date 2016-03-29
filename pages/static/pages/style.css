@@ -1424,3 +1424,43 @@ ul.menu > li:hover > ul.submenu {
   background: #fff;
 	background-image: url(images/menubg.png);
 }
+
+
+.fluid-width-video-wrapper {
+  position: relative;
+  padding-bottom: 56%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  width: 600px;
+  height: 400px;
+  float: left;
+
+}
+
+
+.fluid-width-video-wrapper iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.entry-post {
+  margin-top: 15px;
+  width: 65%;
+  height: 100%;
+  float: left;
+  background-color: #fff;
+}
+
+.entry-content {
+  margin-left: 2%;
+}
+
+.entry-header {
+  margin-left: 2%;
+}
