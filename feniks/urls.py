@@ -1,6 +1,8 @@
 from django.conf.urls import include, url, patterns
 from django.contrib import admin
 from django.conf import settings
+import oembed
+oembed.autodiscover()
 
 urlpatterns = [
     # Examples:
@@ -9,7 +11,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', include('pages.urls')),
-    url(r'^news/', include('news.urls')),
     url(r'^about/', include('pages.urls')),
     url(r'^documents/', include('documents.urls')),
     url(r'^gallery/', include('photos.urls')),

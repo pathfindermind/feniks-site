@@ -520,10 +520,7 @@ margin-top:1em;
 margin-bottom:1em;
 display: block;
 }
-.article ul {
-margin: 0.5em 0 1.571em 1.3em;
-list-style-type: circle;
-}
+
 .article ol {
 margin: 1.5em 0 1.571em 1.571em;
 list-style-type: decimal;
@@ -1464,3 +1461,10 @@ ul.menu > li:hover > ul.submenu {
 .entry-header {
   margin-left: 2%;
 }
+
+.pagination {
+    width: 96%;
+    background-color: #fff;
+
+}
+

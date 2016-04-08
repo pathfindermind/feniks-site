@@ -5,5 +5,5 @@ from oembed.tests.tests.providers import *
 from oembed.tests.tests.resources import *
 from oembed.tests.tests.sites import *
 from oembed.tests.tests.templatetags import *
-from oembed.tests.tests.utils import *
+from lib.oembed.tests.tests.utils import *
 from oembed.tests.tests.views import *

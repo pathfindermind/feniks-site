@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .import models
 from django.conf import settings
-from django.shortcuts import get_object_or_404
-
-from utils.views import object_list
-
-VIDEOS_ON_PAGE = getattr(settings, 'VIDEOS_ON_PAGE', 8)
+from django.shortcuts import get_object_or_404, render_to_response
 
 
 def index(request):
     qs = models.Video.objects.all()
-    tag_name = request.GET.get('tag', None)
-    tag = None
-    if tag_name:
-        tag = get_object_or_404(Tag, name=tag_name)
-        qs = TaggedItem.objects.get_by_model(qs, tag)
-    extra_context = {
-        'tag': tag
-    }
-    return object_list(request, qs, VIDEOS_ON_PAGE,
-                       template_name='videos/index.html',
-                       extra_context=extra_context)
+    paginator = Paginator(qs, 3)
+    page = request.GET.get('page')
+    try:
+        qs = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        qs = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        qs = paginator.page(paginator.num_pages)
+    return render_to_response('videos/index.html', {'qs':qs})

@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load news_tags %}
 {% load slider_tags %}
 {% load links_tags %}
 
@@ -87,14 +86,55 @@
 		{% block content %}
 		<article class="article">
 			<div id="content_box">
-        {% news_title news %}
-				<div class="pnavigation2">
-					<div class="nav-previous left"><a href="#"><span class="meta-nav">←</span> Older posts</a></div>
-					<div class="nav-next right"></div>
-				</div>
+        {% for entry in entries %}
+        <div class="post excerpt ">
+          <header>
+            <h2 class="title">
+              <a href="{{ entry.get_absolute_url }}" rel="bookmark">{{ entry.title }}</a>
+            </h2>
+            <div class="post-info">
+              <time>{{ entry.published_at|date:"Y/M/d" }}</time>
+            </div>
+          </header><!--.header-->
+          <div class="post-content image-caption-format-1">
+            <a href="#" rel="nofollow" id="featured-thumbnail">
+
+            <div class="featured-thumbnail"><img src="/media/{{ entry.image }}" class="attachment-featured wp-post-image" height="150" width="150"></div>															</a>
+            <p>{{ entry.tease }}</p>
+            <p class="more"><a href="{{ entry.get_absolute_url }}">Далее…</a></p>
+          </div>
+        </div><!--.post excerpt-->
+        {% endfor %}
+ <div class="row">
+        <div class="large-3 large-offset-5 columns">
+            <ul class="pagination">
+                {% if entries.has_previous %}
+                    <li class="arrow"><a href="?page={{ entries.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                {% endif %}
+                {% for page in entries.paginator.page_range %}
+                    {% if page == entries.number %}
+                        <li class="current"><a href="?page={{ page }}">{{ page }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ page }}">{{ page }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if entries.has_next %}
+                    <li class="arrow"><a href="?page={{ entries.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="arrow unavailable"><a href="">&raquo;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
 			</div>
+
 		</article>
+
+            </div>
 		{% endblock %}
+
 
 		<aside class="sidebar c-4-12">
 		  <div id="sidebars" class="g">

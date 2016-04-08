@@ -7,8 +7,9 @@
 {% endblock %}
 
 {% block content %}
-    {% for obj in object_list %}
-    <article class="entry-post">
+        <article class="entry-post">
+    {% for obj in qs %}
+
         <header class="entry-header">
             <h3 class="entry-title">{{ obj }}</h3>
             <div class="byline">
@@ -30,8 +31,31 @@
 
         <footer class="entry-footer">
         </footer>
-    </article>
+
     {% endfor %}
 
-
+    <div class="row">
+        <div class="large-3 large-offset-5 columns">
+            <ul class="pagination">
+                {% if qs.has_previous %}
+                    <li class="arrow"><a href="?page={{ qs.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                {% endif %}
+                {% for page in qs.paginator.page_range %}
+                    {% if page == qs.number %}
+                        <li class="current"><a href="?page={{ page }}">{{ page }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ page }}">{{ page }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if qs.has_next %}
+                    <li class="arrow"><a href="?page={{ qs.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="arrow unavailable"><a href="">&raquo;</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+        </article>
 {% endblock %}
