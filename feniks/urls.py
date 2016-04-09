@@ -29,3 +29,7 @@ if settings.DEBUG:
 urlpatterns += patterns('',
     url(r'^captcha/', include('captcha.urls')),
 )
+
+urlpatterns += patterns('',
+    url(r'^grappelli/', include('grappelli.urls')),
+)

@@ -29,9 +29,10 @@ class NewsEntryAdmin(admin.ModelAdmin):
 
     exclude = ('created_at',)
     fieldsets = (
-        (None, {'fields': ('slug', 'title', 'tease', 'body', 'image')}),
+        (None, {'fields': ('title', 'slug', 'tease', 'body', 'image')}),
         ('Properties', {'fields': ('draft', 'published_at')}),
     )
+
 
 '''
 admin.site.register(Category, CategoryAdmin)
