@@ -6,15 +6,16 @@ from django.utils.translation import ugettext_lazy as _
 import oembed
 
 class Video(models.Model):
-    title = models.CharField(_(u'title'), max_length=500)
-    video = models.URLField(_(u'video URL'))
-    description = models.TextField()
+    title = models.CharField(_(u'заголовок'), max_length=500)
+    video = models.URLField(_(u'ссылка на видео с YouTube без http://'))
+    description = models.TextField(u'Описание к видео')
     created = models.DateTimeField(_(u'created'), auto_now_add=True)
 
     class Meta:
         ordering = ['-created']
-        verbose_name = _(u'video')
-        verbose_name_plural = _(u'videos')
+        verbose_name = _(u'видео')
+        verbose_name_plural = _(u'видео')
+
 
     def __unicode__(self):
         return self.title

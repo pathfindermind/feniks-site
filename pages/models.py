@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # Create your models here.
 from django.db import models
+from django.db import models
+from datetime import datetime
+
 
 
 class Slider(models.Model):
@@ -25,11 +28,8 @@ class History(models.Model):
 
     class Meta:
         verbose_name = u'страница истории'
-        verbose_name_plural = u'страницы истории'
+        verbose_name_plural = u'страница истории учреждения'
 
-# -*- coding: utf-8 -*-
-from django.db import models
-from datetime import datetime
 
 '''
 class Category(models.Model):

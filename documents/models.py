@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Constituent(models.Model):
     title = models.CharField(u'Заголовок', max_length=255)
-    doc = models.FileField(upload_to='docs/', blank=True)
+    doc = models.FileField(u'Загрузите документ', upload_to='docs/', blank=True)
 
     def __unicode__(self):
         return self.title
