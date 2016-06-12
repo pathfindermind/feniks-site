@@ -1,0 +1,83 @@
+.title_fb {
+  clear: right;
+  width: 85%;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+#subjectstyle {
+  width: 90%;
+  height: 30px;
+}
+
+.name_fb {
+  margin-bottom: 10px;
+  float: left;
+  width: 40%;
+}
+
+#namestyle {
+  width: 90%;
+  height: 30px;
+}
+
+.phone_fb {
+  margin-bottom: 10px;
+  margin-left: 15px;
+  float: left;
+  width: 34%;
+}
+
+#tellstyle {
+  height: 30px;
+  width: 100%;
+}
+
+#button-form {
+  float: left;
+  margin-right: 180px;
+}
+
+.captcha_fb {
+  height: 100px;
+  width: 200px;
+}
+
+#button-contact{
+  margin-top: 105px;
+  margin-bottom: 5px;
+  cursor:pointer;
+ color: #fff; /* цвет текста */
+ text-decoration: none; /* убирать подчёркивание у ссылок */
+ user-select: none; /* убирать выделение текста */
+ background: green; /* фон кнопки */
+ padding: .7em 1.5em; /* отступ от текста */
+ outline: none; /* убирать контур в Mozilla */
+}
+
+#button-contact:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+#button-contact:active { background: rgb(152,15,0); } /* при нажатии */
+
+
+.text_fb {
+  float: left;
+  width: 100%;
+}
+#messagestyle {
+  width: 76.5%;
+}
+
+#button-form {
+  height: 160px;
+  width: 400px;
+}
+
+
+.contact-content {
+  float: left;
+}
+
+.contact-content h1 {
+  color: #FFF;
+  text-shadow: none;
+}

@@ -139,7 +139,7 @@ margin:10px 0
 body{
 line-height:1;
 font: 14px/23px 'PT Sans', sans-serif;
-color: #666;
+color: #000;
 background:white;
 background-image: url(images/cbg.png);
 }
@@ -1468,3 +1468,12 @@ ul.menu > li:hover > ul.submenu {
 
 }
 
+.row h1 {
+  color: #fff;
+  text-shadow: none;
+  margin-left: 15px;
+}
+
+.form_feedback {
+  margin-left: 15px;
+}

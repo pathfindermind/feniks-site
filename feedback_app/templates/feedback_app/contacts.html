@@ -1,39 +1,47 @@
 {% extends 'pages/base.html' %}
 {% block title %}Контакты{% endblock %}
 {% block content %}
-    <form method="POST" action="{% url "contacts" %}" class="default-form" id="contactform">
+<br>
+<div class = "contact-content">
+  <h1>Мы на карте</h1>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=g_SPX5ghFEspX2HMrBvJGrLTVFdYDGX8&width=650&height=400&lang=ru_RU&sourceType=constructor&scroll=false"></script>
+
+    <form method="POST" action="{% url "contacts" %}" id="contactform">
       <div class="row">
+        <h1>Напишите нам</h1>
+        <div class = "form_feedback">
         {% csrf_token %}
         {{ form.non_field_errors }}
-        <div class="col-lg-12">
+        <div class="title_fb">
              {{ form.title.errors }}
              {{ form.title }}
         </div>
-        <div class="col-lg-6 col-md-6">
+        <div class="name_fb">
              {{ form.name.errors }}
              {{ form.name }}
         </div>
-        <div class="col-lg-6 col-md-6">
+        <div class="phone_fb">
              {{ form.phone.errors }}
              {{ form.phone }}
         </div>
-        <div class="col-lg-12">
+        <div class="text_fb">
                {{ form.text.errors }}
                {{ form.text }}
         </div>
 
-        <div class="col-lg-12">
+        <div class="captcha_fb">
                <label for="id_captcha">Введите код с картинки</label>
                {{ form.captcha }}
         </div>
-        <div class="col-lg-12 text-right" id="button-form">
+        <div class="button_fb text-right" id="button-form">
             <button class="btn btn-contact" id="button-contact">Отправить</button>
               <div class="box" id="messenger"></div>
         </div>
     <div class="box" id="messenger"></div>
+  </div>
 </div>
     </form>
-
+    </div>
 {% endblock %}
 
 {% block sidebar %}
