@@ -102,7 +102,7 @@
             <a href="#" rel="nofollow" id="featured-thumbnail">
 
             <div class="featured-thumbnail"><img src="/media/{{ entry.image }}" class="attachment-featured wp-post-image" height="150" width="150"></div>															</a>
-            <p>{{ entry.tease }}</p>
+            <p class="tease">{{ entry.tease }}</p>
             <p class="more"><a href="{{ entry.get_absolute_url }}">Далее…</a></p>
           </div>
         </div><!--.post excerpt-->
@@ -205,25 +205,11 @@
 	<footer>
 		<div class="container">
 			<div class="footer-widgets">
-				<div class="f-widget">
-					<div class="widget"><h3>Lorem ipsum</h3>
-						<div class="textwidget">Lorem
-						 ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam
-						augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis
-						orci. Duis libero orci, pretium a.</div>
-					</div>
-				</div>
-				<div class="f-widget">
-					<div class="widget"><h3>Consectetuer adipiscing</h3>			<div class="textwidget">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Curabitur</a> quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a.</div>
-					</div>
-				</div>
+
+
 				<div class="f-widget last">
-					<div class="widget">		<h3>Recent Posts</h3>		<ul>
-						<li><a href="#">Porttitor Lectus Tincidunt Elementum Nascetur Montes</a></li>
-						<li><a href="#">Mauris Dictum Libero Id Justo Fusce In Est</a></li>
-						<li><a href="#">Cum Sociis Natoque Penatibus Magnis</a></li>
-						<li><a href="#">Aliquet Pid Massa Porttitor Dictumst Ac Aenean A Dolor?</a></li>
-						</ul>
+					<div class="widget">		<p class="tease">Сайт создан при финансовой поддержке КПК Резервный капитал</p>
+						<a href="#"><img src="{% static 'pages' %}/images/revcap.png"></a>
 					</div>
 				</div>
 				<div class="copyrights">

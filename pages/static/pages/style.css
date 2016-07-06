@@ -27,6 +27,7 @@ border:0;
 font-size:100%;
 font:inherit;
 vertical-align:baseline;
+color: white;
 }
 html {
 overflow-x: hidden;
@@ -142,6 +143,8 @@ font: 14px/23px 'PT Sans', sans-serif;
 color: #000;
 background:white;
 background-image: url(images/cbg.png);
+background-attachment: fixed;
+background-size: cover;
 }
 ::-moz-selection{
 background:#333;
@@ -1326,6 +1329,7 @@ ul.menu > li:hover > ul.submenu {
 
 .detail-text p {
     text-indent: 40px;
+    color: black;
   }
 
   .doc-link {
@@ -1418,8 +1422,6 @@ ul.menu > li:hover > ul.submenu {
   margin-top: 40px;
   width: 650px;
   float: left;
-  background: #fff;
-	background-image: url(images/menubg.png);
 }
 
 
@@ -1476,4 +1478,8 @@ ul.menu > li:hover > ul.submenu {
 
 .form_feedback {
   margin-left: 15px;
+}
+
+.tease {
+  color: black;
 }
