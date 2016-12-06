@@ -175,7 +175,8 @@
 										</ul>
 						</div>
 						</li>
-		        <li class="widget widget-sidebar">		<h3>Recent Posts</h3>		<ul>
+		        <li class="widget widget-sidebar">
+                    <ul>
 		          {% for slider in sliders %}
 		            <li><a href="#">{{ slider.title }}</a></li>
 		            {% endfor %}
@@ -183,11 +184,6 @@
 		        </li>
 		        <li class="widget widget-sidebar">
 		          <div class="mts-subscribe">
-
-		            <form style="" action="#" method="post" target="popupwindow" _lpchecked="1">
-		            <input value="Your email Address..." type="text">
-		            <input value="mythemeshop" name="uri" type="hidden"><input name="loc" value="en_US" type="hidden"><input value="Subscribe" type="submit">
-		            </form>
 
 		            <div class="result"></div>
 
@@ -203,14 +199,12 @@
 	</div><!--#page-->
 </div><!--.container-->
 	<footer>
-		<div class="container">
+		<div class="container-footer">
 			<div class="footer-widgets">
 
 
 				<div class="f-widget last">
-					<div class="widget">		<p class="tease">Сайт создан при финансовой поддержке КПК Резервный капитал</p>
-						<a href="#"><img src="{% static 'pages' %}/images/revcap.png"></a>
-					</div>
+
 				</div>
 				<div class="copyrights">
 					<div class="row" id="copyright-note">

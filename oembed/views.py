@@ -124,7 +124,7 @@ def oembed_schema(request):
             # in things like /news/*/*/*/*/ -- this is more explicit
             if url_pattern:
                 regex = re.sub(r'%\(.+?\)s', '*', url_pattern[0][0][0])
-                match = 'http://%s/%s' % (current_domain, regex)
+                match = 'https://%s/%s' % (current_domain, regex)
         elif isinstance(provider, HTTPProvider):
             match = provider.url_scheme
         else:

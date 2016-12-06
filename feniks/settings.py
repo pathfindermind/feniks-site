@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django_admin_bootstrapped',
+    'flat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,7 +48,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'feedback_app',
     'captcha',
-
+    'ckeditor',
     'oembed',
     'videos',
 
@@ -71,7 +71,7 @@ ROOT_URLCONF = 'feniks.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,6 +83,9 @@ TEMPLATES = [
         },
     },
 ]
+
+
+
 
 WSGI_APPLICATION = 'feniks.wsgi.application'
 
@@ -125,3 +128,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 GRAPPELLI_ADMIN_TITLE = 'Администрация "СРЦН "Феникс"'
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'

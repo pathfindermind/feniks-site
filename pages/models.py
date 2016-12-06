@@ -3,7 +3,7 @@
 from django.db import models
 from django.db import models
 from datetime import datetime
-
+from ckeditor.fields import RichTextField
 
 
 class Slider(models.Model):
@@ -61,8 +61,8 @@ class NewsEntry(models.Model):
     title = models.CharField(u'Заголовок', max_length=50)
     slug = models.SlugField(u'ЧПУ')
     image = models.ImageField(u'Изображение', upload_to='img/', blank=True)
-    tease = models.TextField(u'Анонс', blank=True)
-    body = models.TextField(u'Текст новости')
+    tease = RichTextField(u'Анонс', blank=True)
+    body = RichTextField(u'Текст новости')
     draft = models.BooleanField(u'В черновики', default=False)
     created_at = models.DateTimeField(u'Дата создания', default=datetime.now)
     published_at = models.DateTimeField(u'Дата публикации', default=datetime.now)

@@ -161,6 +161,7 @@ position: relative;
 margin-right: auto;
 margin-left: auto;
 overflow: hidden;
+    background-color:#2b542c ;
 }
 h1,h2,h3,h4,h5,h6{
 font-weight:normal;
@@ -310,6 +311,7 @@ float:left;
 #navigation ul li{
 float:left;
 position:relative;
+    margin-left: 13px;
 }
 #navigation > ul > li:last-child{
 border-right:none;
@@ -338,7 +340,7 @@ margin-top:-2px;
 }
 #navigation ul ul{
 position:absolute;
-width:190px;
+width:180px;
 padding: 5px 0 5px 0;
 z-index: 400;
 font-size:12px;
@@ -354,8 +356,7 @@ border-right: 0;
 #navigation ul ul a,
 #navigation ul ul a:link,
 #navigation ul ul a:visited{
-padding: 9px 20px;
-width:148px;
+padding: 9px 10px;
 -moz-border-radius:0;
 border-radius:0;
 text-align: left;
@@ -670,6 +671,7 @@ float: right;
 width: 31.5%;
 line-height: 23px;
 margin-top:40px;
+    margin-right: 9px;
 }
 .widget {
 margin-bottom: 27px;
@@ -1174,6 +1176,7 @@ padding: 0 0 10px 0;
 @media screen and (max-width:960px){
 #page, .container {
 max-width: 96%;
+    background-color: #005d04;
 }
 .article {
 width: 68%;
@@ -1305,10 +1308,12 @@ ul.submenu {
 ul.submenu > li {
     display: block;
     margin-left: -10px;
+
 }
 ul.submenu > li > a {
     display: block;
     background-image: url(images/menubg.png);
+    width: 110px;
 }
 ul.submenu > li > a:hover {
     text-decoration: underline;
@@ -1387,6 +1392,7 @@ ul.menu > li:hover > ul.submenu {
   .menu {
 	background: #fff;
 	background-image: url(images/menubg.png);
+      width: 100%;
 }
 
 .menu-item a {

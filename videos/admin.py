@@ -8,6 +8,6 @@ from videos import models
 
 class VideoAdmin(admin.ModelAdmin):
     form = forms.VideoAdminForm
-    list_display = ['title']
+    list_display = ['title', 'video', 'description']
 
 admin.site.register(models.Video, VideoAdmin)
